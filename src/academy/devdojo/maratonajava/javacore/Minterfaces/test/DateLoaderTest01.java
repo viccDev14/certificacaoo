@@ -1,6 +1,7 @@
 package academy.devdojo.maratonajava.javacore.Minterfaces.test;
 
 import academy.devdojo.maratonajava.javacore.Minterfaces.dominio.DataBaseLoader;
+import academy.devdojo.maratonajava.javacore.Minterfaces.dominio.DataLoader;
 import academy.devdojo.maratonajava.javacore.Minterfaces.dominio.FileLoader;
 
 public class DateLoaderTest01 {
@@ -9,5 +10,12 @@ public class DateLoaderTest01 {
         FileLoader fileLoader = new FileLoader();
         dataBaseLoader.load();
         fileLoader.load();
+        dataBaseLoader.remove();
+        fileLoader.remove();
+        dataBaseLoader.checkPermission();
+        fileLoader.checkPermission();
+        DataBaseLoader.retrieverMaxDataSize();
+        DataLoader.retrieverMaxDataSize();
+
     }
 }
