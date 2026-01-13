@@ -1,17 +1,16 @@
 package academy.devdojo.maratonajava.javacore.Npolimorfismo.test;
 
 import academy.devdojo.maratonajava.javacore.Npolimorfismo.dominio.Computador;
-import academy.devdojo.maratonajava.javacore.Npolimorfismo.dominio.Televisao;
+import academy.devdojo.maratonajava.javacore.Npolimorfismo.dominio.Produto;
 import academy.devdojo.maratonajava.javacore.Npolimorfismo.dominio.Tomate;
 import academy.devdojo.maratonajava.javacore.Npolimorfismo.servico.CalculadoraImposto;
 
-public class ProdutoTest01 {
+public class ProdutoTest03 {
     public static void main(String[] args) {
-        Computador computador = new Computador("ACEMAGIC", 12000);
-        Tomate tomate = new Tomate("Cereja", 4);
-        Televisao televisao = new Televisao("Samsung 50", 2000);
-        CalculadoraImposto.calcularImposto(computador);
+        Produto produto = new Computador("AceMAGIC", 3000);
+        Tomate tomate = new Tomate("Cereja", 2);
+        tomate.setDataValidade("11/12/2023");
         CalculadoraImposto.calcularImposto(tomate);
-        CalculadoraImposto.calcularImposto(televisao);
+        CalculadoraImposto.calcularImposto(produto);
     }
 }
