@@ -24,15 +24,14 @@ public class Manga implements Comparable<Manga> {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Manga manga = (Manga) o;
-        return Double.compare(preco, manga.preco) == 0 && id.equals(manga.id) && nome.equals(manga.nome);
+        return Objects.equals(id, manga.id) && Objects.equals(nome, manga.nome);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, preco);
+        return Objects.hash(id, nome);
     }
 
     @Override
@@ -88,9 +87,9 @@ public class Manga implements Comparable<Manga> {
 //            return 1;
 //        }
 
-        return this.nome.compareTo(outroManga.getNome());
+//        return this.nome.compareTo(outroManga.getNome());
 //        return this.id.compareTo(outroManga.getId());
 //        return Double.valueOf(preco).compareTo(outroManga.getPreco());
-//        return Double.compare(this.preco, outroManga.getPreco());
+        return Double.compare(this.preco, outroManga.getPreco());
     }
 }

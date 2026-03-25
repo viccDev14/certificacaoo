@@ -2,10 +2,7 @@ package academy.devdojo.maratonajava.javacore.Ycolecoes.test;
 
 import academy.devdojo.maratonajava.javacore.Ycolecoes.dominio.Manga;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 class MangaByIdComparator implements Comparator<Manga> {
     @Override
@@ -15,7 +12,7 @@ class MangaByIdComparator implements Comparator<Manga> {
 }
 public class MangaSortTest01 {
     public static void main(String[] args) {
-        List<Manga> animes = new ArrayList<>(6);
+        List<Manga> animes = new LinkedList<>();
         animes.add(new Manga(1L, "One Piece", 18.0));
         animes.add(new Manga(5L,"HunterxHunter", 21.6));
         animes.add(new Manga(4L, "Dr Stone", 1.4));
